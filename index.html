@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to My CI/CD Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 420px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 8px 0;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 14px;
+            background: #00c853;
+            color: #000;
+            font-weight: bold;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>🚀 Deployment Successful</h1>
+        <p>Your application is running.</p>
+        <p>Served by <strong>NGINX</strong></p>
+        <p>Built & deployed using <strong>Jenkins CI/CD</strong></p>
+
+        <div class="badge">CI/CD ACTIVE</div>
+
+        <footer>
+            <p>Environment: Dev</p>
+            <p>Build Time: <span id="time"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("time").innerText = new Date().toLocaleString();
+    </script>
+
+</body>
+</html>
+
